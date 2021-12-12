@@ -28,15 +28,14 @@ Things you may want to cover:
 ## users テーブル
 | Column             | Type   | Options                   |
 | ------------------ | ------ | ------------------------- |
+| nickname           | string | null: false
 | email              | string | null: false, unique: true |
 | encrypted_password | string | null: false               |
 | first_name         | string | null: false               |
 | last_name          | string | null: false               |
 | first_name_kana    | string | null: false               |
 | last_name_kana     | string | null: false               |
-| birthday_year      | integer| null: false               |
-| birthday_month     | integer| null: false               |
-| birthday_day       | integer| null: false               |
+| birthday           | date   | null: false               |
 
 ### Assosiation
 
@@ -50,11 +49,11 @@ Things you may want to cover:
 | -----------------| ---------- | ------------------------------ |
 | item_name        | string     | null: false                    |
 | explanation      | text       | null: false                    |
-| category         | string     | null: false                    |
-| status           | string     | null: false                    |
-| delivery_caharge | string     | null: false                    |
-| area             | string     | null: false                    |
-| derivery_date    | string     | null: false                    |
+| category         | integer    | null: false                    |
+| status           | integer    | null: false                    |
+| delivery_caharge | integer    | null: false                    |
+| area             | integer    | null: false                    |
+| derivery_date    | integer    | null: false                    |
 | price            | integer    | null: false                    | 
 | user             | references | null: false, foreign_key: true |
 
@@ -82,12 +81,13 @@ Things you may want to cover:
 
 | Column           | Type       | Options                        |
 | -----------------| ---------- | ------------------------------ |
-| post_code        | integer    | null: false                    |
-| prefectures      | string     | null: false                    |
+| post_code        | string     | null: false                    |
+| prefectures      | integer    | null: false                    |
 | city             | string     | null: false                    |
-| house_number     | integer    | null: false                    |
+| house_number     | string     | null: false                    |
 | building_name    | string     |                                |
-| phone_number     | integer    | null: false                    |
+| phone_number     | string     | null: false                    |
+| order            | references | null:false, foreign_key: true  |
 
 ### Assosiation
 
