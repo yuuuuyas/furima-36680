@@ -45,17 +45,17 @@ Things you may want to cover:
 
 ## items テーブル
 
-| Column           | Type       | Options                        |
-| -----------------| ---------- | ------------------------------ |
-| item_name        | string     | null: false                    |
-| explanation      | text       | null: false                    |
-| category         | integer    | null: false                    |
-| status           | integer    | null: false                    |
-| delivery_caharge | integer    | null: false                    |
-| area             | integer    | null: false                    |
-| derivery_date    | integer    | null: false                    |
-| price            | integer    | null: false                    | 
-| user             | references | null: false, foreign_key: true |
+| Column              | Type       | Options                        |
+| -----------------   | ---------- | ------------------------------ |
+| item_name           | string     | null: false                    |
+| explanation         | text       | null: false                    |
+| category_id         | integer    | null: false                    |
+| status_id           | integer    | null: false                    |
+| delivery_caharge_id | integer    | null: false                    |
+| area_id             | integer    | null: false                    |
+| derivery_date_id    | integer    | null: false                    |
+| price               | integer    | null: false                    | 
+| user_id             | references | null: false, foreign_key: true |
 
 ### Assosiation
 
@@ -67,8 +67,8 @@ Things you may want to cover:
 
 | Column           | Type       | Options                        |
 | -----------------| ---------- | ------------------------------ |
-| item             | references | null: false, foreign_key: true |
-| user             | references | null: false, foreign_key: true |
+| item_id          | references | null: false, foreign_key: true |
+| user_id          | references | null: false, foreign_key: true |
 
 ### Assosiation
 
@@ -82,12 +82,12 @@ Things you may want to cover:
 | Column           | Type       | Options                        |
 | -----------------| ---------- | ------------------------------ |
 | post_code        | string     | null: false                    |
-| prefectures      | integer    | null: false                    |
+| prefectures_id   | integer    | null: false                    |
 | city             | string     | null: false                    |
 | house_number     | string     | null: false                    |
 | building_name    | string     |                                |
 | phone_number     | string     | null: false                    |
-| order            | references | null:false, foreign_key: true  |
+| order_id         | references | null:false, foreign_key: true  |
 
 ### Assosiation
 
