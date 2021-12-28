@@ -17,6 +17,6 @@ class Item < ApplicationRecord
     validates :delivery_charge_id, presence: true
     validates :area_id, presence: true
     validates :delivery_date_id, presence: true
-    validates :price, presence: true, numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 }, format: { with: /\A[0-9]+\z/ }
+    validates :price, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 }
 
 end
